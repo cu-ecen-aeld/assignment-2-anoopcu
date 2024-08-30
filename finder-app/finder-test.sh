@@ -34,7 +34,7 @@ rm -rf "${WRITEDIR}"
 # create $WRITEDIR if not assignment1
 assignment=`cat ../conf/assignment.txt`
 
-if [ $assignment != 'assignment1' ]
+if [ $assignment = 'assignment1' ]
 then
 	mkdir -p "$WRITEDIR"
 
@@ -71,3 +71,4 @@ else
 	echo "failed: expected  ${MATCHSTR} in ${OUTPUTSTRING} but instead found"
 	exit 1
 fi
+
